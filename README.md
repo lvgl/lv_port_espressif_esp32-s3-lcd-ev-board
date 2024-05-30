@@ -1,63 +1,61 @@
-# LVGL ported to BOARD NAME
+# LVGL ported to ESP32-S3-LCD-EV-Board
 
 ## Overview
 
-Short overview
+This is LVGL ported to [ESP32-S3-LCD-EV-Board](https://github.com/espressif/esp-bsp/tree/master/bsp/esp32_s3_lcd_ev_board) with using Espressif [BSP](https://github.com/espressif/esp-bsp). This example shows LVGL music demo.
+
+| <div align=center><img src="https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/_images/ESP32-S3-LCD-EV-Board_800x480.png" width=400/></div> | <div align=center><img src="https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/_images/ESP32-S3-LCD-EV-Board_480x480.png" width=400/></div> |
+| :----: | :----: |
 
 ## Buy
 
-You can purchase ... from ...
+You can purchase ESP32-S3-LCD-EV-Board from [MOUSER](https://mou.sr/4aFdj07) or [Official shop on AliExpress](https://www.aliexpress.com/item/1005005720726421.html).
 
 ## Benchmark
 
-Describe the default buffering and other configuration.
-
-YouTube video link
+You can find more about performance in [BSP repository](https://github.com/espressif/esp-bsp/blob/master/components/esp_lvgl_port/docs/performance.md).
 
 ## Specification
 
 ### CPU and Memory
-- **MCU:**
-- **RAM:** ...MB internal, ...MB external SDRAM
-- **Flash:** ...MB internal, ..MB External
-- **GPU:** if any
+- **MCU:** ESP32-S3
+- **RAM:** 512 KB internal SRAM,  8/16 MB external PSRAM
+- **Flash:** 2/4/8/16 MB
 
 ### Display and Touch
-- **Resolution:** ...x...
-- **Display Size:** ..."
-- **Interface:** SPI/LCD/MIPI/etc
-- **Color Depth:** ...-bit
-- **Technology:** TN/IPS
-- **DPI:** ... px/inch
-- **Touch Pad:** Resistive/Capacitive/None
+- **Resolution:** 800x480 / 480x480
+- **Display Size:** 4.3" / 3.95"
+- **Interface:** RGB LCD
+- **Color Depth:** 24-bit
+- **Touch Pad:** Capacitive (GT1151/FT5x06)
 
 ### Connectivity
-- Other peripheries
+- Onboard audio codec + audio amplifier
+- Onboard dual microphone pickup
+- USB type-C interface download and debugging
 
 ## Getting started
 
 ### Hardware setup
-- jumpers, switches
-- connect the display
-- which USB port to use
+- Connect the display (480x480 or 800x480)
+- Connect USB-C (marked as UART) to PC
+- [Board User Guide](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-lcd-ev-board/user_guide.html)
 
 ### Software setup
-- Install drivers if needed
-- Install the IDE + links
+- Prepare environment for compiling ESP-IDF - follow this [guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html).
 
 ### Run the project
-- Clone this repository repository: ...
-- Open the terminal or Import into an IDE...
-- Build the project. How?
-- Run or Debug. How?
+- Clone this repository
+- Select screen size in `menuconfig` (default is 800x480):
+```
+idf.py menuconfig
+```
+Component config --> Board Support Package --> LCD --> Select Target Sub board
 
-### Debugging
-- Debug  `printf`?
-- Other?
--
-## Notes
-
-Other notes, e.g. different configs, optimization opportunities, adding other libraries to the project, etc
+- Compile and flash
+```
+idf.py -p COMx flash monitor
+```
 
 ## Contribution and Support
 
