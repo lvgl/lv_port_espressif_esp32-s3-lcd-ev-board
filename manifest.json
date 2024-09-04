@@ -51,17 +51,28 @@
             ]
         },
         {
-            "type": "checkbox",
+            "type": "dropdown",
             "label": "Show performance monitor",
+            "options": [
+                {
+                    "name": "Yes",
+                    "value": "1",
+                    "default": "true"
+                },
+                {
+                    "name": "No",
+                    "value": "0"
+                }
+            ],
             "actions": [
                 {
-                    "ifValue": "true",
+                    "ifValue": "1",
                     "toReplace": "CONFIG_LV_USE_PERF_MONITOR=.+",
                     "newContent": "CONFIG_LV_USE_PERF_MONITOR=y",
                     "filePath": "sdkconfig.defaults"
                 },
                 {
-                    "ifValue": "false",
+                    "ifValue": "0",
                     "toReplace": "CONFIG_LV_USE_PERF_MONITOR=.+",
                     "newContent": "CONFIG_LV_USE_PERF_MONITOR=n",
                     "filePath": "sdkconfig.defaults"
