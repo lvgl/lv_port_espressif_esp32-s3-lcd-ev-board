@@ -29,7 +29,10 @@
     "description": "ESP32-S3-LCD-EV-Board is a development board for evaluating and verifying ESP32-S3 screen interactive applications. It has the functions of touch screen interaction and voice interaction.",
     "shortDescription": "Powerful ESP32-S3 based development board supporting various displays.",
     "urlToClone": "https://github.com/lvgl/lv_port_espressif_esp32-s3-lcd-ev-board",
-    "logo": "https://raw.githubusercontent.com/lvgl-private/project_creator_data/master/meta/images/espressif/logo.svg",
+    "logo": "https://raw.githubusercontent.com/lvgl-private/project_creator_data/master/meta/images/espressif/logo.svg",,
+    "branches": [
+        "release/v9.2"
+    ],
     "settings": [
         {
             "type": "dropdown",
