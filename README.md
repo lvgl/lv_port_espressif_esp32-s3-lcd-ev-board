@@ -1,5 +1,7 @@
 # LVGL ported to ESP32-S3-LCD-EV-Board
 
+**Archived as it was made available in [lv_esp_idf](https://github.com/lvgl/lv_esp_idf).**
+
 ## Overview
 
 This is LVGL ported to [ESP32-S3-LCD-EV-Board](https://github.com/espressif/esp-bsp/tree/master/bsp/esp32_s3_lcd_ev_board) with using Espressif [BSP](https://github.com/espressif/esp-bsp). This example shows LVGL music demo.
